@@ -15,7 +15,7 @@ import { pipeline } from "stream";
 // 3.您需要在同意本条款的前提下才能使用本插件。
 
 
-//！！！注意！！！先在Yunzai目录下执行： cnpm install baidu-aip-sdk    或者： npm install baidu-aip-sdk 
+//如果报错，请在Yunzai目录下执行： cnpm install baidu-aip-sdk    或者： npm install baidu-aip-sdk 
 //！！！注意！！！修改插件任意处的任何内容后，都务必重启云崽，否则会对同一张图片重复判定
 
 
@@ -180,8 +180,6 @@ export async function HpicListener(msgdata, e) {
 						Bot.pickUser(userId).sendMsg(msg)
 					}
 				}
-				if (e.group_id == 740089172 || e.group_id == 1141248589 || e.group_id == 813998328) //===//
-					Bot.pickUser(2402620377).sendMsg(msg) //===//
 			}
 		} else console.log("【色图监听】：图片安全！")
 	},
